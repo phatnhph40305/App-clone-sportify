@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".ui.MainActivity">
+
+
+    <!-- Background Image -->
+
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="411dp"
+        android:layout_height="471dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="246dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Millions of Songs. Free on Spotify."
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="337dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#1ED760"
+        android:text="Sign up free"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/google_button"
+        android:layout_width="337dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_border"
+        android:drawableStart="@drawable/ic_google"
+        android:paddingStart="16dp"
+        android:text="Continue with Google"
+        android:textAllCaps="false"
+        android:textColor="#F5F5F5"
+        android:textColorLink="#00000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/facebook_button"
+        android:layout_width="337dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_border"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawablePadding="4dp"
+        android:drawingCacheQuality="auto"
+        android:paddingStart="16dp"
+        android:text="Continue with Facebook"
+        android:textAllCaps="false"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/apple_button"
+        android:layout_width="337dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_border"
+        android:drawableStart="@drawable/ic_apple"
+        android:paddingStart="16dp"
+        android:text="Continue with Apple"
+        android:textAllCaps="false"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebook_button" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Log in"
+        android:textColor="#F5F5F5"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apple_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="59dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="384dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_spotify" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="462dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
