@@ -5,4 +5,9 @@
     <dimen name="_8dp">8dp</dimen>
     <dimen name="_19sp">19sp</dimen>
     <dimen name="_24dp">24dp</dimen>
+    <dimen name="_59dp">59dp</dimen>
+    <dimen name="_37dp">37dp</dimen>
+    <dimen name="_12dp">12</dimen>
+    <dimen name="_13_5sp">13.5sp</dimen>
+    <item name="_10_5sp" type="dimen" format="float">10.5</item>
 </resources>
