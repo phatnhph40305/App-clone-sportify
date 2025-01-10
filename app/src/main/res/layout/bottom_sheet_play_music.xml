@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_59dp"
+    android:paddingHorizontal="@dimen/_8dp"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_single"
+        android:layout_width="@dimen/_37dp"
+        android:layout_height="@dimen/_37dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/img_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/img_single"
+        android:layout_toStartOf="@+id/btn_play_or_pause"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_title_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_ltpro_bold"
+            android:text="@string/txt_title_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13_5sp"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenirnextltpro_mediumcn"
+            android:text="@string/txt_title_default"
+            android:textColor="#1DB954"
+            android:layout_marginTop="@dimen/_4dp"
+            android:textSize="@dimen/_10_5sp"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_play_or_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_pause"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/img_single"
+        android:progress="50"/>
+
+
+
+</RelativeLayout>
