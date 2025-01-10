@@ -27,18 +27,17 @@ class ArtistAdapter(private val artists: List<Artist>) :
         }
 
     override fun onBindViewHolder(holder: ArtistViewHolder, position: Int) {
-        val artist1 = artists[position * 3] // First artist in the group
-        val artist2 = artists[position * 3 + 1] // Second artist
-        val artist3 = artists[position * 3 + 2] // Third artist
+        val artist1 = artists[position * 3]
+        val artist2 = artists[position * 3 + 1]
+        val artist3 = artists[position * 3 + 2]
 
         holder.artistNameTextView1.text = artist1.name
-        // ... (load image for artist1 using Glide) ...
 
         holder.artistNameTextView2.text = artist2.name
-        // ... (load image for artist2 using Glide) ...
+
 
         holder.artistNameTextView3.text = artist3.name
-        // ... (load image for artist3 using Glide) ...
+
     }
 
     override fun getItemCount(): Int = artists.size / 3

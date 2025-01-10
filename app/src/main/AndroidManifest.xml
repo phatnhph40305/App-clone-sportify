@@ -24,6 +24,16 @@
         <activity android:name=".ui.login.LoginActivity"
             android:exported="true">
         </activity>
+        <activity android:name=".ui.signup.SignUpActivity1"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ui.signup.SignUpActivity2"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ui.signup.SignUpActivity3"
+            android:exported="true"/>
+         <activity android:name=".ui.signup.SignUpActivity4"
+             android:exported="true"/>
     </application>
 
 </manifest>
