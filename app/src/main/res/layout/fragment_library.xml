@@ -1,14 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_8dp"
+    android:background="@color/black"
     tools:context=".ui.library.LibraryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/user_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_avatar_user"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_avatar_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_toEndOf="@+id/img_avatar_user"
+            android:text="@string/txt_your_library"
+            android:fontFamily="@font/avenir_next_ltpro_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_add" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/liked_song_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/user_layout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_avatar_liked"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:background="@drawable/img_liked_songs"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_toEndOf="@+id/img_avatar_liked"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_ltpro_bold"
+                android:text="@string/txt_liked_songs"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_8dp"
+                    android:fontFamily="@font/avenirnextltpro_mediumcn"
+                    android:text="@string/txt_play_list"
+                    android:textSize="@dimen/_13_5sp"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    app:drawableStartCompat="@drawable/ic_pin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_coutn_songs"
+                    android:drawablePadding="@dimen/_4dp"
+                    android:fontFamily="@font/avenirnextltpro_mediumcn"
+                    android:textSize="@dimen/_13_5sp"
+                    app:drawableStartCompat="@drawable/ic_dot" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/new_episodes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/liked_song_layout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_new_episodes"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:background="@drawable/img_liked_songs"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_toEndOf="@+id/img_new_episodes"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_ltpro_bold"
+                android:text="@string/txt_new_episodes"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_8dp"
+                    android:fontFamily="@font/avenirnextltpro_mediumcn"
+                    android:text="@string/txt_updated"
+                    android:textSize="@dimen/_13_5sp"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    app:drawableStartCompat="@drawable/ic_pin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_last_updated"
+
+                    android:fontFamily="@font/avenirnextltpro_mediumcn"
+                    android:textSize="@dimen/_13_5sp"
+                 />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/new_episodes_layout"
+            android:layout_marginTop="@dimen/_16dp"
+            tools:listitem="@layout/view_holder_library"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

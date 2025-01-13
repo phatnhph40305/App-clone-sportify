@@ -16,7 +16,9 @@
         android:layout_height="wrap_content"
         android:text="@string/txt_recently_played"
         android:fontFamily="@font/avenir_next_ltpro_bold"
-        android:textSize="@dimen/_19sp"
+
+
+        android:textSize="@dimen/_25sp"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_setting"
@@ -62,6 +64,8 @@
         android:layout_height="142dp"
         tools:listitem="@layout/view_holder_recently_played"
         app:layout_constraintTop_toBottomOf="@+id/tv_recently_played"
+        android:layout_marginTop="@dimen/_16dp"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

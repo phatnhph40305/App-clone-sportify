@@ -7,7 +7,14 @@
     <dimen name="_24dp">24dp</dimen>
     <dimen name="_59dp">59dp</dimen>
     <dimen name="_37dp">37dp</dimen>
-    <dimen name="_12dp">12</dimen>
+    <dimen name="_12dp">12dp</dimen>
     <dimen name="_13_5sp">13.5sp</dimen>
-    <item name="_10_5sp" type="dimen" format="float">10.5</item>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_380dp">380dp</dimen>
+    <dimen name="_22sp">22sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_10_5sp">16dp</dimen>
+    <dimen name="_25sp">25sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
 </resources>
