@@ -9,16 +9,6 @@
     tools:context=".ui.MainActivity">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="?attr/colorPrimaryDark"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-        app:titleTextColor="@android:color/white"
-        />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
