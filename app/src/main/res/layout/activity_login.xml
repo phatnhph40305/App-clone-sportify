@@ -9,19 +9,20 @@
     tools:context=".ui.login.LoginActivity">
 
 
-    <!-- Background Image -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="411dp"
+            android:layout_height="471dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_login" />
 
-    <ImageView
-        android:id="@+id/background_image"
-        android:layout_width="411dp"
-        android:layout_height="471dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/title_text"
@@ -107,19 +108,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/facebook_button" />
 
-    <TextView
-        android:id="@+id/login_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Log in"
-        android:textColor="#F5F5F5"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/apple_button" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="59dp"
@@ -135,7 +123,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="574dp" />
+        app:layout_constraintGuide_end="588dp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:background="#121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apple_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

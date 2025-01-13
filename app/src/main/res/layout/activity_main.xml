@@ -19,7 +19,6 @@
        <include
            android:id="@+id/bottom_sheet_play_music"
            layout="@layout/bottom_sheet_play_music"
-           app:layout_constraintBottom_toBottomOf="parent"
            />
    </RelativeLayout>
 
