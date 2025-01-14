@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatar_artists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_avatar_artists"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/avatar_artists"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_name_artists"
+            android:fontFamily="@font/avenir_next_ltpro_bold"
+            android:textSize="@dimen/_16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_posison"
+            android:fontFamily="@font/avenirnextltpro_mediumcn"
+            android:textSize="@dimen/_13_5sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+    
+   
+
+</RelativeLayout>

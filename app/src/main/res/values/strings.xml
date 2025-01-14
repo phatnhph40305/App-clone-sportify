@@ -5,4 +5,24 @@
     <string name="text_default_item">1(Remastered)</string>
     <string name="txt_recently_played">Recently played</string>
     <string name="txt_title_default">From Me to You - Mono / Remastered</string>
+    <string name="_1_remastered">1(Remastered)</string>
+    <string name="txt_name_song_default">The Beatles</string>
+    <string name="txt_time_song_default">0:32</string>
+    <string name="txt_time_song">1:12</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_search_default">Artists, songs, or podcasts</string>
+    <string name="txt_your_top_genres">Your top genres</string>
+    <string name="txt_popular_podcast_categories">Popular podcast categories</string>
+    <string name="txt_browse_all">Browse all</string>
+    <string name="txt_your_library">Your Library</string>
+    <string name="txt_name_artists">Lana Del Rey</string>
+    <string name="txt_posison">Artist</string>
+    <string name="txt_liked_songs">Liked Songs</string>
+    <string name="txt_play_list">play list</string>
+    <string name="txt_coutn_songs">58 songs</string>
+    <string name="txt_new_episodes">New Episodes</string>
+    <string name="txt_updated">Updated</string>
+    <string name="txt_last_updated">2 day ago</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_your_Library">Your library</string>
 </resources>
