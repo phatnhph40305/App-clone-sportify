@@ -45,8 +45,7 @@ android {
 }
 
 dependencies {
-    val room_version = "2.6.1"
-    val nav_version = "2.8.5"
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
