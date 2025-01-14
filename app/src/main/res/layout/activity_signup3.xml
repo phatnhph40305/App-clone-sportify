@@ -1,0 +1,101 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_left_arrow"
+        android:text="."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/create_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Create account"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="What's your gender?"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_account_text" />
+
+    <!-- Checkbox for Male -->
+    <CheckBox
+        android:id="@+id/cb_male"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Male"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/cb_female"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender_text" />
+
+    <!-- Checkbox for Female -->
+    <CheckBox
+        android:id="@+id/cb_female"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/cb_male"
+        app:layout_constraintTop_toBottomOf="@id/gender_text"
+        app:layout_constraintEnd_toStartOf="@id/cb_other"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <!-- Checkbox for Other -->
+    <CheckBox
+        android:id="@+id/cb_other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/cb_female"
+        app:layout_constraintTop_toBottomOf="@id/gender_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_btn_next"
+        android:text="Next"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_female" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

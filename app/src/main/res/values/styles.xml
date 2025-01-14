@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HeadingText">
+        <item name="android:fontFamily">@font/avenir_next_ltpro_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="SubheadingText">
+        <item name="android:fontFamily">@font/avenir_next_ltpro_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="HintText">
+        <item name="android:fontFamily">@font/avenirnextltpro_demi</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:fontFamily">@font/avenirnextltpro_demi</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+</resources>

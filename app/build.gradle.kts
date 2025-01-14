@@ -37,8 +37,10 @@ android {
         jvmTarget = "11"
     }
 
+
     buildFeatures{
         viewBinding = true
+
     }
 }
 
@@ -71,6 +73,9 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
+    implementation("androidx.recyclerview:recyclerview:1.3.0") 
+    implementation("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
 
 
 
