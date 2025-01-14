@@ -3,15 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginActivity">
 
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.example.appclonesprotify.ui.login.LoginActivity"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
-    <fragment
-        android:id="@+id/loginFragment1"
-        android:name="com.example.appclonesprotify.ui.login.LoginFragment1"
-        android:label="LoginFragment1" />
-</navigation>
+    app:startDestination="@+id/nav_home"
+ >
+    <include app:graph="@navigation/nav_home"/>
+    <include app:graph="@navigation/nav_search"/>
+    <include app:graph="@navigation/nav_your_library"/>
+
+    </navigation>
+
