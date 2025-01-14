@@ -1,4 +1,12 @@
 package com.example.appclonesprotify.utils
 
-class Utils
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
+object Utils {
+
+
+
+
+}
 

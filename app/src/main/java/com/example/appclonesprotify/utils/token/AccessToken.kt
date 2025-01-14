@@ -10,7 +10,7 @@ object AccessToken {
 
     private const val clientId = "9a8025ea0aa64258bee27065ae686e28"
     private const val clientSecret = "1655456b30d64b728f70317308eb444e"
-    private var accessToken: String? = null
+     var accessToken: String? = null
 
     // Hàm lấy access token
     suspend fun getAccessToken(): String? {
@@ -37,4 +37,5 @@ object AccessToken {
 
         return accessToken  // Trả về token sau khi lấy thành công
     }
+
 }
