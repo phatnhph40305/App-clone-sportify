@@ -1,7 +1,9 @@
 package com.example.appclonesprotify.data.source
 
+import java.lang.Exception
 
- abstract class  ResponseResource{
+
+abstract class ResponseResource {
     class Success<T>(val data: T) : ResponseResource()
-    class Error<T>(val exception: Exception) : ResponseResource()
+    class ErrorResponse (val exception: Exception) : ResponseResource()
 }

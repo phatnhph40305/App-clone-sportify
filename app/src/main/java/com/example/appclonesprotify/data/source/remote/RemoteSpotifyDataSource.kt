@@ -1,17 +1,21 @@
 package com.example.appclonesprotify.data.source.remote
-
 import com.example.appclonesprotify.data.source.SpotifyDataSource
 import com.example.appclonesprotify.data.source.ResponseResource
+import com.example.appclonesprotify.utils.token.AccessToken
 
 
-class RemoteSpotifyDataSource(private val accessToken: String, private val playListId: String) :
+class RemoteSpotifyDataSource() :
     SpotifyDataSource {
     override suspend fun loadData(callBack: SpotifyDataSource.DataSourceCallBack) {
-        val retrofit = RetrofitInstance.retrofit?.create(SpotifyApiService::class.java)
-        val response = retrofit?.getPlaylistTracks(accessToken, playListId)!!
+        val retrofit =
+            RetrofitInstance.retrofit.getShows("Bearer ${AccessToken.getAccessToken()!!}")
 
-        callBack.completed(ResponseResource.Success(response.body()))
-
+        val data = retrofit.body()
+        if (data != null) {
+        callBack.completed(ResponseResource.Success(data))
+        }else{
+            callBack.completed(ResponseResource.ErrorResponse(Exception(retrofit.message())))
+        }
 
     }
 
