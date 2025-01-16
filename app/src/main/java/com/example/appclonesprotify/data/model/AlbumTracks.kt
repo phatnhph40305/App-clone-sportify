@@ -4,15 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class AlbumTracks(
      val href: String,
-     val limit: Float,
+     val limit: Int,
      val next: String,
      val offset: Int,
      val previous: String,
      val total: Int,
      val items: List<Item>
-){
-    constructor() : this("", 0f, "", 0, "", 0, emptyList())
-}
+)
 
 
 

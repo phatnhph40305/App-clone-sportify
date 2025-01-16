@@ -8,15 +8,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.appclonesprotify.data.source.SelectedDataSource
-import com.example.appclonesprotify.data.source.SpotifyDataRepository
-import com.example.appclonesprotify.data.source.remote.RemoteSpotifyDataSource
 import com.example.appclonesprotify.databinding.ActivityMainBinding
-import com.example.appclonesprotify.ui.viewmodel.PlayListTracksViewModel
-import com.example.appclonesprotify.ui.viewmodel.SpotifyViewModelFactory
 import com.example.appclonesprotify.utils.token.AccessToken
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import com.example.appclonesprotify.ui.viewmodel.SpotifyAlbumTracksViewModel
+import com.google.gson.Gson
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,25 +35,13 @@ class MainActivity : AppCompatActivity() {
             binding.menu.setupWithNavController(navController)
         }
 
-        setUpViewModel()
-
-
-    }
-
-    private fun setUpViewModel() {
-
-        val remoteDataSource: RemoteSpotifyDataSource = RemoteSpotifyDataSource()
-        val selectedDataSource = SelectedDataSource.REMOTE
-
-        val spotifyDataRepository =SpotifyDataRepository(selectedDataSource , remoteDataSource)
-
-        val spotifyViewModel = ViewModelProvider(this , SpotifyViewModelFactory(spotifyDataRepository))[PlayListTracksViewModel::class.java]
-
-
-        spotifyViewModel.data.observe(this){data ->
-            Log.d("Data" , data.toString())
+        val viewModel = ViewModelProvider(this)[SpotifyAlbumTracksViewModel::class.java]
+        viewModel.tracks.observe(this){track ->
+            Log.d("Data from viewmodel" , Gson().toJson(track.toString()) )
 
         }
+
+
     }
 }
 

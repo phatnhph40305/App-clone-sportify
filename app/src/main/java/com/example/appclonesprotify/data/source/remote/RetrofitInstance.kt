@@ -1,6 +1,5 @@
 package com.example.appclonesprotify.data.source.remote
 
-import okhttp3.Interceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
