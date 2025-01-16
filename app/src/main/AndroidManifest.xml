@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
+        android:name=".utils.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,6 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCloneSprotify"
         tools:targetApi="31">
+        <service
+            android:name=".services.PlayMusicService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true">
@@ -21,23 +33,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".ui.signup.SignUpActivity1"
-            android:exported="true">
-        </activity>
-        <activity android:name=".ui.signup.SignUpActivity2"
-            android:exported="true">
-        </activity>
-        <activity android:name=".ui.signup.SignUpActivity3"
-            android:exported="true"/>
-         <activity android:name=".ui.signup.SignUpActivity4"
-             android:exported="true"/>
-        <activity android:name=".ui.signup.ChooseArtists"
-            android:exported="true"/>
-        <activity android:name=".ui.login.Login"
-            android:exported="true"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ui.signup.SignUpActivity1"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ui.signup.SignUpActivity2"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ui.signup.SignUpActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".ui.signup.SignUpActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".ui.signup.ChooseArtists"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login.Login"
+            android:exported="true" />
     </application>
 
 </manifest>

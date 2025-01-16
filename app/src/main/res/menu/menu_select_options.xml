@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item android:id="@+id/acAddFavorite"
+        android:title="@string/txt_add_favorite"
+        android:icon="@drawable/img_favorite"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/acAddListSong"
+        android:title="@string/txt_hide_song"
+        android:icon="@drawable/ic_add_song"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/acHideSong"
+        android:title="@string/txt_hide_song"
+        android:icon="@drawable/ic_hide_song"
+        app:showAsAction="always"/>
+
+</menu>
