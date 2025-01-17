@@ -24,6 +24,7 @@ class MyApplication : Application() {
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(Utils.CHANNEL_ID, name, importance).apply {
                 description = descriptionText
+                setSound(null, null)
             }
             // Register the channel with the system.
             val notificationManager: NotificationManager =

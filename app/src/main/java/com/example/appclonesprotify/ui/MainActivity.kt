@@ -1,6 +1,7 @@
 package com.example.appclonesprotify.ui
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import com.example.appclonesprotify.ui.viewmodel.SpotifyAlbumTracksViewModel
 import com.google.gson.Gson
+import com.example.appclonesprotify.services.PlayMusicService
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +45,13 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val intent = Intent(this , PlayMusicService::class.java)
+        stopService(intent)
+    }
 }
+
 
 

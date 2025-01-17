@@ -1,5 +1,6 @@
 package com.example.appclonesprotify.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,7 +14,8 @@ import com.example.appclonesprotify.databinding.FragmentHomeBinding
 import com.example.appclonesprotify.ui.viewmodel.SpotifyAlbumTracksViewModel
 import com.example.appclonesprotify.ui.adapter.SongForYouAdapter
 import com.example.appclonesprotify.data.model.Item
-
+import com.example.appclonesprotify.services.PlayMusicService
+import com.example.appclonesprotify.utils.Common
 
 
 class HomeFragment : Fragment() {
@@ -40,10 +42,16 @@ class HomeFragment : Fragment() {
                 SongForYouAdapter(it.items,
                     onAddListSong = {},
                     onAddFavorite = {},
-                    onHideSong = {}
-                    , object : SongForYouAdapter.OnClickItem{
-                        override fun playMusic(item: Item) {
-                            Toast.makeText(requireContext(), item.name , Toast.LENGTH_SHORT).show()
+                    onHideSong = {}, object : SongForYouAdapter.OnClickItem {
+                        override fun playMusic(position: Int) {
+//                            Common.tracks = tracks
+
+                            val intent = Intent(requireActivity(), PlayMusicService::class.java)
+                            intent.putExtra("position_song", position)
+                            val bundle = Bundle()
+                            bundle.putSerializable("list_song", tracks)
+                            intent.putExtras(bundle)
+                            requireActivity().startService(intent)
                         }
 
                     }
@@ -56,8 +64,6 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
-
-
 
 
 }

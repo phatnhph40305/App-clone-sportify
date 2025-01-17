@@ -20,7 +20,7 @@ class SongForYouAdapter(
     inner class ViewHolderHome(private val binding: ViewHolderSongForYouBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item) {
+        fun bind(item: Item, position: Int) {
             val listArtist = item.artists
             val nameArtists = StringBuilder().apply {
                 item.artists.forEachIndexed() { index, item ->
@@ -36,7 +36,7 @@ class SongForYouAdapter(
             binding.tvNameSong.text = item.name
 
             binding.layoutPlayMusic.setOnClickListener {
-                onClickItem.playMusic(item)
+                onClickItem.playMusic( position)
             }
 
             val btnMore = binding.btnMore
@@ -71,7 +71,7 @@ class SongForYouAdapter(
 
 
     interface OnClickItem{
-        fun playMusic(item: Item)
+        fun playMusic( position: Int)
     }
 
 
@@ -84,7 +84,7 @@ class SongForYouAdapter(
     override fun getItemCount(): Int = listItem.size
 
     override fun onBindViewHolder(holder: ViewHolderHome, position: Int) {
-        holder.bind(listItem[position])
+        holder.bind(listItem[position] , position)
 
     }
 }

@@ -1,6 +1,7 @@
 package com.example.appclonesprotify.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Item(
     val artists: List<Artist>,
@@ -48,4 +49,4 @@ data class Item(
     val isLocal: Boolean,
 
     val favorite: Boolean
-)
+) : Serializable

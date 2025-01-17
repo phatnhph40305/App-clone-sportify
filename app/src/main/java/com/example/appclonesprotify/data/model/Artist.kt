@@ -1,6 +1,7 @@
 package com.example.appclonesprotify.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Artist(
     @SerializedName("external_urls")
@@ -15,4 +16,4 @@ data class Artist(
      val type: String,
 
      val uri: String,
-)
+): Serializable
