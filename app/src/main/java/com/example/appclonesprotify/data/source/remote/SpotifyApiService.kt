@@ -14,4 +14,12 @@ interface SpotifyApiService {
     ): Response<AlbumTracks>
 
 
+    @GET("v1/albums/4aawyAB9vmqN3uQ7FjRGTy/tracks")
+    suspend fun getTopHitVn(
+        @Header("Authorization") accessToken: String,
+    ): Response<AlbumTracks>
+
+
+
+
 }

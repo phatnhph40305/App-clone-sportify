@@ -38,7 +38,7 @@ android {
     }
 
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
 
     }
@@ -56,8 +56,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
     implementation(libs.kotlinx.coroutines.android)
 
     // optional - Kotlin Extensions and Coroutines support for Room
@@ -66,21 +66,17 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     //view model scope
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // Views/Fragments integration
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
-    implementation("androidx.recyclerview:recyclerview:1.3.0") 
+    implementation("androidx.recyclerview:recyclerview:1.3.0")
     implementation("com.github.bumptech.glide:glide:4.13.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
 
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
-
-
-
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
 }

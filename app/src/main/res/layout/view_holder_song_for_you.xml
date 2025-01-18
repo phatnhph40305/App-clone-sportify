@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:paddingHorizontal="@dimen/_8dp"
+    android:layout_marginTop="16dp"
+    >
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/img_song"
+    android:layout_width="47dp"
+    android:layout_height="47dp"
+    android:background="@drawable/img_artis"
+    android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:id="@+id/layout_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/img_song"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_toStartOf="@+id/btn_more"
+        >
+        <TextView
+            android:id="@+id/tv_name_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_name_song"
+            android:fontFamily="@font/avenir_next_ltpro_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_name_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_name_artists"
+            android:fontFamily="@font/avenirnextltpro_mediumcn"
+            android:textColor="#C8C0C0"
+            android:textSize="@dimen/_12sp"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/btn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_more"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_8dp"
+        />
+
+
+
+    
+</RelativeLayout>
