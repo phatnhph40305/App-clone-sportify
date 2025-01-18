@@ -1,19 +1,64 @@
 package com.example.appclonesprotify.data.model
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
+
+
 
 data class Artist(
     @SerializedName("external_urls")
-     val externalUrls: ExternalUrl,
+    val externalUrls: ArtistExternalUrl,
 
-     val href: String,
+    val followers: Followers,
 
-     val id: String,
+    val genres: List<String>,
 
-     val name: String,
+    val href: String,
 
-     val type: String,
+    val id: String,
 
-     val uri: String,
-): Serializable
+    val images: List<Image>,
+
+    val name: String,
+
+    val popularity: Int,
+
+    val type: String,
+
+    val uri: String,
+
+
+
+)
+
+data class ArtistResponse(
+    val artists: List<Artist>
+)
+
+data class SearchResponse(
+    @SerializedName("artists")
+    val artists: ArtistSearchResult
+)
+
+data class ArtistSearchResult(
+    val items: List<Artist>,
+    val total: Int,
+    val limit: Int,
+    val offset: Int
+)
+
+data class Followers(
+    val href: String?,
+    val total: Int
+)
+
+data class Image(
+    val url: String,
+    val height: Int,
+    val width: Int
+)
+
+data class ArtistExternalUrl(
+    val spotify: String
+)
+
+

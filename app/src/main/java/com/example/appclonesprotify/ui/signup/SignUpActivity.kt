@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appclonesprotify.R
 import com.example.appclonesprotify.ui.login.LoginActivity
@@ -32,15 +33,24 @@ class SignUpActivity1 : AppCompatActivity() {
 
         nextButton.setOnClickListener {
             val email = emailInput.text.toString()
-            val intent = Intent(this, SignUpActivity2::class.java)
-            intent.putExtra("email", email)
-            startActivity(intent)
+
+            if (isValidEmail(email)) {
+                val intent = Intent(this, SignUpActivity2::class.java)
+                intent.putExtra("email", email)
+                startActivity(intent)
+            } else {
+                emailInput.error = "Please enter a valid email address"
+            }
         }
 
         backButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+    }
+    private fun isValidEmail(email: String): Boolean {
+        val emailRegex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        return email.matches(emailRegex.toRegex())
     }
 }
 
@@ -61,16 +71,24 @@ class SignUpActivity2 : AppCompatActivity() {
         nextButton.setOnClickListener {
             val email = intent.getStringExtra("email") ?: ""
             val password = passwordInput.text.toString()
-            val intent = Intent(this, SignUpActivity3::class.java)
-            intent.putExtra("email", email)
-            intent.putExtra("password", password)
-            startActivity(intent)
+            if (isValidPassword(password)) {
+                val intent = Intent(this, SignUpActivity3::class.java)
+                intent.putExtra("email", email)
+                intent.putExtra("password", password)
+                startActivity(intent)
+            } else {
+                passwordInput.error = "Password must be at least 8 characters long"
+//                Toast.makeText(this, "Password must be at least 8 characters long", Toast.LENGTH_SHORT).show()
+            }
         }
-
         backButton.setOnClickListener {
             finish()
         }
     }
+    private fun isValidPassword(password: String): Boolean {
+        return password.length >= 8;
+    }
+
 }
 
 class SignUpActivity3 : AppCompatActivity() {
@@ -170,6 +188,8 @@ class SignUpActivity4 : AppCompatActivity() {
             val name = nameInput.text.toString()
             val gender = intent.getStringExtra("gender") ?: ""
 
+            val specialCharRegex = Regex("[^a-zA-Z0-9 ]")
+
             val user = User(email, password, name, gender)
             val db = UserDatabase.getDatabase(this)
             val userDao = db.userDao()
@@ -182,6 +202,12 @@ class SignUpActivity4 : AppCompatActivity() {
                 ).show()
                 return@setOnClickListener
             }
+
+            if (specialCharRegex.containsMatchIn(name)) {
+                nameInput.error = "Name cannot contain special characters"
+                return@setOnClickListener
+            }
+
 
             if (!newsCheckBox.isChecked || !marketingCheckBox.isChecked) {
                 Snackbar.make(
@@ -202,7 +228,7 @@ class SignUpActivity4 : AppCompatActivity() {
                             "Account created successfully!",
                             Snackbar.LENGTH_SHORT
                         ).show()
-                        val intent = Intent(this@SignUpActivity4, LoginActivity::class.java)
+                        val intent = Intent(this@SignUpActivity4, ChooseArtists::class.java)
                         startActivity(intent)
                         finish()
                     }

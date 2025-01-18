@@ -19,7 +19,7 @@
     <string name="txt_time_song_default">0:32</string>
     <string name="txt_time_song">1:12</string>
     <string name="txt_search">Search</string>
-    <string name="txt_search_default">Artists, songs, or podcasts</string>
+    <string name="txt_search_default">Artists or songs</string>
     <string name="txt_your_top_genres">Your top genres</string>
     <string name="txt_popular_podcast_categories">Popular podcast categories</string>
     <string name="txt_browse_all">Browse all</string>
