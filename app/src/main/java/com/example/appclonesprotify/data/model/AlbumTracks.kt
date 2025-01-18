@@ -30,7 +30,7 @@ data class Item(
      val explicit: Boolean,
 
     @SerializedName("external_urls")
-     val externalUrls: ExternalUrl,
+     val externalUrls: AlbumExternalUrl,
 
      val href: String,
 
@@ -67,7 +67,7 @@ data class Restriction(
 data class Linked(
 
     @SerializedName("external_urls")
-     val externalUrls: ExternalUrl,
+     val externalUrls: AlbumExternalUrl,
 
      val href: String,
 
@@ -79,22 +79,8 @@ data class Linked(
 
 )
 
-data class ExternalUrl(
+data class AlbumExternalUrl(
      val spotify: String
 )
 
 
-data class Artist(
-    @SerializedName("external_urls")
-     val externalUrls: ExternalUrl,
-
-     val href: String,
-
-     val id: String,
-
-     val name: String,
-
-     val type: String,
-
-     val uri: String,
-)

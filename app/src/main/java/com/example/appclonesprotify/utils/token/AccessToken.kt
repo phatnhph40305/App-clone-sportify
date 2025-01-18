@@ -18,7 +18,7 @@ object AccessToken {
             return accessToken  // Trả về token nếu đã có
         }
 
-        // Nếu chưa có token, gọi API để lấy token mới
+        // Nếu chưa có atoken, gọi API để lấy token mới
         val credentials = "$clientId:$clientSecret"
         val base64Credentials = Base64.encodeToString(credentials.toByteArray(), Base64.NO_WRAP)
         val authorization = "Basic $base64Credentials"
