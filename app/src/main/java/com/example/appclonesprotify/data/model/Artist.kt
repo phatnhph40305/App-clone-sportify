@@ -3,6 +3,7 @@ package com.example.appclonesprotify.data.model
 import com.google.gson.annotations.SerializedName
 
 
+
 data class Artist(
     @SerializedName("external_urls")
     val externalUrls: ArtistExternalUrl,
@@ -59,6 +60,5 @@ data class Image(
 data class ArtistExternalUrl(
     val spotify: String
 )
-
 
 

@@ -1,6 +1,7 @@
 package com.example.appclonesprotify.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class AlbumTracks(
      val href: String,
@@ -10,12 +11,11 @@ data class AlbumTracks(
      val previous: String,
      val total: Int,
      val items: List<Item>
-)
+) : Serializable
 
 
 
-data class Item(
-     val artists: List<Artist>,
+
 
 //    @SerializedName("available_markets")
 //     val availableMarkets: List<String>,
@@ -60,9 +60,10 @@ data class Item(
      val isLocal: Boolean
 )
 
+
 data class Restriction(
      val reason: String
-)
+): Serializable
 
 data class Linked(
 
@@ -77,10 +78,11 @@ data class Linked(
 
      val uri: String
 
-)
+) : Serializable
 
 data class AlbumExternalUrl(
      val spotify: String
-)
+): Serializable
+
 
 
